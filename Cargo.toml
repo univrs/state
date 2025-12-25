@@ -1,0 +1,26 @@
+[package]
+name = "univrs-state"
+version = "0.1.0"
+edition = "2021"
+authors = ["Univrs.io Contributors"]
+license = "MIT"
+description = "Unified state storage abstraction for Univrs ecosystem"
+repository = "https://github.com/univrs/univrs-state"
+keywords = ["state", "storage", "kv-store", "sqlite", "univrs"]
+categories = ["database", "asynchronous"]
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+async-trait = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+sqlx = { version = "0.8", features = ["sqlite", "runtime-tokio"] }
+parking_lot = "0.12"
+tokio-stream = "0.1"
+futures = "0.3"
+tracing = "0.1"
+
+[dev-dependencies]
+tokio-test = "0.4"
+tempfile = "3"
