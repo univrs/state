@@ -2,6 +2,9 @@
 
 Unified state storage abstraction for the Univrs ecosystem.
 
+> [!CAUTION]
+> This project is a research demonstrator. It is in early development and may change significantly. Using permissive Univrs tools in your repository requires careful attention to security considerations and careful human supervision, and even then things can still go wrong. Use it with caution, and at your own risk. See [Disclaimer](#disclaimer).
+
 ## Overview
 
 `univrs-state` provides a backend-agnostic key-value store designed for distributed systems. It serves as the persistence layer for all Univrs components, offering a consistent API whether you're storing workload definitions, peer information, credit relationships, or any other structured data.
@@ -286,6 +289,19 @@ async fn main() -> univrs_state::Result<()> {
     Ok(())
 }
 ```
+
+## Disclaimer
+
+> [!IMPORTANT]
+> **This is an experimental system. _We break things frequently_.**
+
+- Not accepting contributions yet (but we plan to!)
+- No stability guarantees
+- Pin commits if you need consistency
+- This is a learning resource, not production software
+- **No support provided** - See [SUPPORT.md](SUPPORT.md)
+
+---
 
 ## License
 
